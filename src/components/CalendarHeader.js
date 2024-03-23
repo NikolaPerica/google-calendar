@@ -11,11 +11,14 @@ export default function CalendarHeader() {
     function handleNextMonth(){
         setMonthIndex(monthIndex+1)
     }
+    function handleReset(){
+        setMonthIndex(dayjs().month())
+    }
   return (
     <header className='px-4 py-2 flex items-center'>
         <img src={logo} alt="calendar" className='mr-2 w-12 h-12' />
         <h1 className='mr-10 text-xl text-gray-500 font-bold'>Calendar</h1>
-        <button className="border rounded py-2 px-4 mr-5">
+        <button onClick={handleReset} className="border rounded py-2 px-4 mr-5">
             Today
         </button>
         <button onClick={handlePrevMonth}>
