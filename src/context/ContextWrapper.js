@@ -41,7 +41,7 @@ export default function ContextWrapper(props) {
     },[smallCalendarMonth])
   return (
     <GlobalContext.Provider value={{monthIndex, setMonthIndex, smallCalendarMonth, 
-        setSmallCalendarMonth, daySelected, setDaySelected, showEventModal, setShowEventModal, dispatchCalEvent}}>
+        setSmallCalendarMonth, daySelected, setDaySelected, showEventModal, setShowEventModal, dispatchCalEvent, savedEvents}}>
         {props.children}
     </GlobalContext.Provider>
   )
